@@ -1,10 +1,17 @@
+//test
 const express = require('express')
 const app = express()
 
 app.get('/', function(req, res){
-	res.send('Ye Huahua is a Guapi!!!')
+	res.send('Default Message')
 })
 
-app.listen(8080, function() {
-	console.log("Example app listening at http")
+app.get('/list_user', function(req, res){
+  res.send('List All Users!')
+})
+
+var server = app.listen(8080, function() {
+  var host = server.address().address
+  var port = server.address().port
+	console.log("Example app listening at http://%s:%s", host, port)
 })
