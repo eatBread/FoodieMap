@@ -28,7 +28,7 @@ app.get('/process_get', function(req, res) {
 
 app.get('/', function(req, res){
     res.sendfile(path.join(__dirname + '/templates/map.html'));
-}
+})
 
 var server = app.listen(8080, function() {
   var host = server.address().address
