@@ -1,11 +1,33 @@
+var DEFAULT_ZOOM = 10;
+var GOOGLE_API_KEY = AIzaSyAWnS2pfv6DIGVleFEcPME3bEQ0WAmQGBU;
+
 function initMap(){
-    var uluru = {lat: -25.363, lng: 131.044};
+    var position = {
+    	lat: 40.623290,
+    	lng: -74.024127
+    };
     var map = new google.maps.Map($('#map')[0], {
-        zoom: 4,
-        center: uluru
+        zoom: DEFAULT_ZOOM,
+        center: position
     });
     var marker = new google.maps.Marker({
-        position: uluru,
+        position: position,
         map: map
+    });
+
+    $.ajax({
+        url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/output?parameters',
+        data: {
+            'location': position.lat + ',' + position.lng,
+            'type': 'restaurant',
+            'key': GOOGLE_API_KEY,
+            'radius': 500
+        },
+        success: function (data) {
+            debugger;
+        },
+        failure: function (data) {
+            debugger;
+        }
     });
 }
