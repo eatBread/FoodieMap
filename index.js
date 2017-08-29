@@ -3,8 +3,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
-app.use(express.static('public'))
-
+app.use('/public',express.static('public'))
  //  app.get('/', function(req, res){
  //  	res.send('Default Message')
  //  })
@@ -27,7 +26,7 @@ app.get('/process_get', function(req, res) {
 })
 
 app.get('/', function(req, res){
-    res.sendfile(path.join(__dirname + '/templates/map.html'));
+    res.sendFile(path.join(__dirname + '/public/template/map.html'));
 })
 
 var server = app.listen(8080, function() {
