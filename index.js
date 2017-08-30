@@ -3,6 +3,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+const PORT_NUM = 8080;
+const GOOGLE_API_KEY = AIzaSyAWnS2pfv6DIGVleFEcPME3bEQ0WAmQGBU;
+
+
 app.use('/public',express.static('public'));
  //  app.get('/', function(req, res){
  //  	res.send('Default Message')
@@ -29,7 +33,7 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname + '/public/template/map.html'));
 });
 
-var server = app.listen(8080, function() {
+var server = app.listen(PORT_NUM, function() {
   var host = server.address().address
   var port = server.address().port
 	console.log("Example app listening at http://%s:%s", host, port)

@@ -1,5 +1,5 @@
 var DEFAULT_ZOOM = 10;
-var GOOGLE_API_KEY = AIzaSyAWnS2pfv6DIGVleFEcPME3bEQ0WAmQGBU;
+var GOOGLE_API_KEY = 'AIzaSyAWnS2pfv6DIGVleFEcPME3bEQ0WAmQGBU';
 
 function initMap(){
     var position = {
@@ -16,7 +16,7 @@ function initMap(){
     });
 
     $.ajax({
-        url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/output?parameters',
+        url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json',
         data: {
             'location': position.lat + ',' + position.lng,
             'type': 'restaurant',
