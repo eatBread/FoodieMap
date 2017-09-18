@@ -1,4 +1,4 @@
-
+//mymap.js
 $(function(){
     var GOOGLE_API_KEY = 'AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0';
 
