@@ -2,7 +2,7 @@
 $(function(){
     var GOOGLE_API_KEY = 'AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0';
 
-    var DEFAULT_ZOOM = 10;
+    var DEFAULT_ZOOM = 15;
     var DEFAULT_RADIUS = 500;
     var DEFAULT_LAT = 40.623290;
     var DEFAULT_LNG = -74.024127;
@@ -18,12 +18,12 @@ $(function(){
        var params = {
          'location': position,
          'radius': DEFAULT_RADIUS,
-         'type': restaurant
+         'type': 'restaurant'
        }
 
        var service = new google.maps.places.PlacesService(map);
 
-       service.nearbySearch(params, function(result, status){
+       service.nearbySearch(params, function(results, status){
          if(status == google.maps.places.PlacesServiceStatus.OK){
             var current_infowindow;
 
