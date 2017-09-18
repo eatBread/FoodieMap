@@ -5,7 +5,7 @@ const app = express();
 const request = require('request');
 
 const PORT_NUM = 8080;
-const GOOGLE_API_KEY = 'AIzaSyAWnS2pfv6DIGVleFEcPME3bEQ0WAmQGBU';
+const GOOGLE_API_KEY = 'AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0';
 const NEARBY_SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
 
 

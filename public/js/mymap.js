@@ -1,6 +1,7 @@
 var DEFAULT_ZOOM = 10;
-var GOOGLE_API_KEY = 'AIzaSyAWnS2pfv6DIGVleFEcPME3bEQ0WAmQGBU';
+var GOOGLE_API_KEY = 'AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0';
 
+$(function(){
 function initMap(){
     var position = {
     	lat: 40.623290,
@@ -31,3 +32,5 @@ function initMap(){
         }
     });
 }
+initMap();
+});
