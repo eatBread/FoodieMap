@@ -4,14 +4,23 @@
         <link rel="stylesheet" type="text/css" href="/public/css/mymap.css">
     </head>
     <body>
-        <h3>My Google Maps Demo</h3>
-        <div id="map"></div>
-        <script defer type="text/javascript" src="/public/js/mymap.js"></script>
+        
         <script type="text/javascript" src="/public/js/jquery.js"></script>
         <script type="text/javascript" src="/public/js/underscore.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0" type="text/javascript"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0" type="text/javascript"></script> -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcEOTH2FqnbaDecCEJOyvoIj8bYuRFbR0&libraries=places"></script>
-
+        <script type="text/javascript" src="/public/js/mymap.js"></script>
+        <div id="map"></div>
+        <div id = "place-info-wrapper">
+            <div id = "hero-header-wrapper"><img></img></div>
+            <div id = "place-basic-info-wrapper">
+                <div id = "place-basic-info">
+                    <div class = "place-name info-text"></div>
+                    <div class = "place-review-score info-text"></div>
+                    <div class = "place-type info-text"></div>
+                </div>
+            </div>
+        </div>
     </body>
 
 </html>

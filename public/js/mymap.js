@@ -51,10 +51,29 @@ $(function(){
                     }
                     infowindow.open(map, marker);
                     current_infowindow = infowindow;
+                    showDetailedInfo(place);
                 });
             });
         }
     });
+        
+        function showDetailedInfo(place){
+            var params = {
+                placeId: place['place_id']
+            };
+            service.getDetails(params, function(place){
+                if(place.photos[0]){
+                    $('#hero-header-wrapper img').attr('src', place.photos[0].getUrl({
+                        'maxWidth': 408,
+                        'maxHeight': 407
+                    }));
+                }
+                $('.place-name').text(place['name']);
+                $('.place-review-score').text(place['rating']);
+                $('.place-type').text(place['types'][0]);
+                $('.place-info-wrapper').show();
+            });
+        }
 
 
        // $.ajax({
